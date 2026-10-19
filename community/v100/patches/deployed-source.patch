@@ -1,0 +1,91 @@
+diff --git a/src/program/generate.cpp b/src/program/generate.cpp
+index aae51631..922c8d21 100644
+--- a/src/program/generate.cpp
++++ b/src/program/generate.cpp
+@@ -1,4 +1,7 @@
+ #include "strata/core/logit_bias.hpp"
++#if defined(STRATA_EXPERIMENTAL_SM60) && !defined(STRATA_USE_HIP) && !defined(STRATA_HIP_GFX906)
++#include "../prefill/cuda_length_chunks.hpp"
++#endif
+ // src/program/generate.cpp - P2.S6: `strata generate`.
+ //
+ // THE DRIVER, and the first program in this project that answers a question.  Everything below it is a
+@@ -7181,7 +7184,21 @@ int main(int argc, char** argv) {
+     // segment's chunk is chosen (the serve lend, generate's prompt); `request_chunk` is unchanged because
+     // STRATA_SPLIT_SMALL_OWN uses it too.  The chunk geometry changes the rounding, so it is off by default.
+     static const bool equal_chunks = [] { const char* e = std::getenv("STRATA_PREFILL_EQUAL"); return e != nullptr && e[0] == '1'; }();
++    bool length_chunks = false;
++#if defined(STRATA_EXPERIMENTAL_SM60) && !defined(STRATA_USE_HIP) && !defined(STRATA_HIP_GFX906)
++    // Local CUDA experiment only. Other backends and the default path are unchanged.
++    if (const char* e = std::getenv("STRATA_PREFILL_LENGTH_CHUNKS"))
++        length_chunks = multi_gpu && !o.prefill_head_alias && std::atoi(e) != 0;
++    if (length_chunks)
++        std::fprintf(stderr, "strata generate: measured length chunks on: <=8192:2048, <=49152:4096, longer:8192; configured cap %lld\n",
++                     (long long) o.prefill_chunk);
++#endif
+     auto equal_chunk = [&](int64_t tokens, int64_t max_chunk) -> int64_t {
++#if defined(STRATA_EXPERIMENTAL_SM60) && !defined(STRATA_USE_HIP) && !defined(STRATA_HIP_GFX906)
++        // Explicit request/operator pipe tuning takes precedence over the measured table.
++        if (length_chunks && strata::prefill::Prefill::pipe_setting() <= 0.0)
++            max_chunk = strata::prefill::cuda_length_chunks::cap(tokens, max_chunk);
++#endif
+         const int64_t plain = request_chunk(tokens, max_chunk);
+         if (!equal_chunks || tokens <= 0 || max_chunk <= 0) return plain;
+         const int64_t n = tokens / max_chunk + (tokens % max_chunk != 0);
+@@ -12776,7 +12793,11 @@ int main(int argc, char** argv) {
+                         resume_plan = {};   // the first segment only
+                     }
+                     if (plan.chunk <= 0) {
+-                        const int64_t c = sp.plan_chunk(b0 - a0);
++                        int64_t c = sp.plan_chunk(b0 - a0);
++                        // Retain the chosen geometry across checkpoints/BYIELD, including when pipe=0.
++                        // lend(..., resume_plan.lend) above restores its original allocation before this check.
++                        if (c <= 0 && length_chunks && strata::prefill::Prefill::pipe_setting() <= 0.0)
++                            c = sp.chunk();
+                         if (c > 0) {
+                             plan.chunk = c;
+                             plan.from = a0;
+diff --git a/tests/cuda/prefill_mmq_tab_test.cu b/tests/cuda/prefill_mmq_tab_test.cu
+index 69518299..ecea9fe9 100644
+--- a/tests/cuda/prefill_mmq_tab_test.cu
++++ b/tests/cuda/prefill_mmq_tab_test.cu
+@@ -20,7 +20,8 @@
+ // once with the full groups in row-count order (mmq_resident_sort_rows, the partial group kept): every token's
+ // product row bitwise equal, when mmq::whole_tiles says so for this card (else only reported). Sorting the partial
+ // group too (STRATA_MMQ_RESIDENT_SORT_NE) is reported, not required.
+-// Exit 77 without a CUDA device of sm_80 or newer or without the pointer-table build.
++// Exit 77 without a CUDA device of sm_70 or newer or without the pointer-table build.
++// Include Volta's DP4A MMQ path: the pointer-table scheduler must match the gathered path there too.
+ #include "strata/prefill/moe_mmq.hpp"
+ 
+ #include "ggml.h"
+@@ -516,8 +517,8 @@ int main() {
+     try {
+         int dev = 0;
+         cudaDeviceProp prop{};
+-        if (cudaGetDevice(&dev) != cudaSuccess || cudaGetDeviceProperties(&prop, dev) != cudaSuccess || prop.major < 8) {
+-            std::printf("needs a CUDA device of sm_80 or newer: skipped\n");
++        if (cudaGetDevice(&dev) != cudaSuccess || cudaGetDeviceProperties(&prop, dev) != cudaSuccess || prop.major < 7) {
++            std::printf("needs a CUDA device of sm_70 or newer: skipped\n");
+             return 77;
+         }
+         if (!mmq::built() || !mmq::tab_built()) {
+--- /dev/null
++++ b/src/prefill/cuda_length_chunks.hpp
+@@ -0,0 +1,16 @@
++#pragma once
++
++#include <algorithm>
++#include <cstdint>
++
++namespace strata::prefill::cuda_length_chunks {
++
++// Opt-in, measured on four V100s. The caller passes the uncached segment length,
++// and the configured ceiling always wins. No hardware/load-dependent choices.
++inline int64_t cap(int64_t tokens, int64_t configured) {
++    if (tokens <= 0 || configured <= 0) return 0;
++    const int64_t measured = tokens <= 8192 ? 2048 : tokens <= 49152 ? 4096 : 8192;
++    return std::min(configured, measured);
++}
++
++}  // namespace strata::prefill::cuda_length_chunks

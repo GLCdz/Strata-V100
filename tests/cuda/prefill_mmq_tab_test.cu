@@ -20,7 +20,8 @@
 // once with the full groups in row-count order (mmq_resident_sort_rows, the partial group kept): every token's
 // product row bitwise equal, when mmq::whole_tiles says so for this card (else only reported). Sorting the partial
 // group too (STRATA_MMQ_RESIDENT_SORT_NE) is reported, not required.
-// Exit 77 without a CUDA device of sm_80 or newer or without the pointer-table build.
+// Exit 77 without a CUDA device of sm_70 or newer or without the pointer-table build.
+// Include Volta's DP4A MMQ path: the pointer-table scheduler must match the gathered path there too.
 #include "strata/prefill/moe_mmq.hpp"
 
 #include "ggml.h"
@@ -516,8 +517,8 @@ int main() {
     try {
         int dev = 0;
         cudaDeviceProp prop{};
-        if (cudaGetDevice(&dev) != cudaSuccess || cudaGetDeviceProperties(&prop, dev) != cudaSuccess || prop.major < 8) {
-            std::printf("needs a CUDA device of sm_80 or newer: skipped\n");
+        if (cudaGetDevice(&dev) != cudaSuccess || cudaGetDeviceProperties(&prop, dev) != cudaSuccess || prop.major < 7) {
+            std::printf("needs a CUDA device of sm_70 or newer: skipped\n");
             return 77;
         }
         if (!mmq::built() || !mmq::tab_built()) {

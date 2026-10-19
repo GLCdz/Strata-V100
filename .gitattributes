@@ -10,3 +10,6 @@ tests/data/native_experts/** -text
 
 # the quant yardstick's text set: tokenized byte for byte (set.ids.json), never convert its line endings
 data/quant_quality/** -text
+
+# Unified patch context lines must retain their leading space.
+community/v100/patches/*.patch -whitespace

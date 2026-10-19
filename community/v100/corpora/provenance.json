@@ -1,0 +1,9 @@
+{
+  "source": "docs/paper/Strata-Paper.pdf in the upstream repository",
+  "upstream": "https://github.com/Niko1221/Strata",
+  "license": "MIT; see repository LICENSE",
+  "normalization": "Python re.sub(r\"\\s+\", \" \", text); estimate 0.3083 tokens/character; actual tokenizer counts are reported.",
+  "original_extracted_text_sha256": "4ed5d803108cd49ca64f58f2becc38655c5b8aaed1dd988dda3a55624aadc637",
+  "published_text_sha256": "b55f36743f4fd4ddde01631f16037c064eb6d3df0c894c16c187d69bf5595c9d",
+  "publication_normalization": "Collapsed whitespace for Git transport; benchmark whitespace normalization preserves the original prompt corpus."
+}

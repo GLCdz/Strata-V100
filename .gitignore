@@ -64,3 +64,11 @@ build-vision-cuda12.bat
 
 # local Windows HIP packaging output
 dist-hip/
+
+# Local deployment and research; publish only curated community/v100 files.
+/research/
+/artifacts/
+/environments/
+/validation/
+/WORKSPACE.md
+/community/v100/local/

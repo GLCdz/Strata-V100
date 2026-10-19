@@ -1,3 +1,5 @@
+> **Strata-V100 community fork / 四卡 V100 优化分支** — [中文说明](community/v100/README.md) · [English guide](community/v100/README.en.md) · [Benchmarks](community/v100/BENCHMARKS.md) · [Build/run](community/v100/REPRODUCE.md). Based on upstream v0.1.45; experimental CUDA/sm70 profile, optional code patch, 256K validation. The upstream introduction follows below.
+
 <h1 align="center">Strata</h1>
 
 [English](README.md) · **简体中文** · [日本語](README.ja.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md) · [Português](README.pt-BR.md)

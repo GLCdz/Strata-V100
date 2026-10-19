@@ -1,0 +1,36 @@
+{
+  "version": "0.1.45",
+  "local_variant": "v100-length-chunks-20261019",
+  "commit": "477ac13cbe8e582c20484871ce459d20d82df09d",
+  "source_patch_sha256": "3a590f2df561ca91c6682db39ff87453a3e648cedac1a4365acc883d89b4250d",
+  "archs": [
+    70
+  ],
+  "cuda": "12.6",
+  "ggml_pinned": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "cmake_options": {
+    "STRATA_MMQ_TAB": "ON",
+    "STRATA_EXPERIMENTAL_SM60": "ON"
+  },
+  "sha256": {
+    "strata": "dcb3a6048ae0e3f781fe6f06553691740bccccdd761e30c80385dd3af13b249a",
+    "libstrata_kq.so": "1f277bc8621aa02590f7ee07ce3ddd3c75e18abcd480e11fa903340ef308dcfe"
+  },
+  "kernel_validation": [
+    {
+      "test": "prefill_mmq_tab_test",
+      "returncode": 0,
+      "elapsed_s": 106.99932980537415
+    },
+    {
+      "test": "gr_parity",
+      "returncode": 0,
+      "elapsed_s": 0.3652524948120117
+    },
+    {
+      "test": "gdn_parity",
+      "returncode": 0,
+      "elapsed_s": 0.9666311740875244
+    }
+  ]
+}

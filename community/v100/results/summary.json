@@ -1,0 +1,1746 @@
+{
+  "baseline-128k": {
+    "warmup": {
+      "n": 1,
+      "values": [
+        69.4
+      ],
+      "median": 69.4,
+      "prefill_values": [
+        63.471913678197396
+      ],
+      "ttft_values": [
+        0.3343009948730469
+      ],
+      "output_tokens": [
+        46
+      ],
+      "hashes": [
+        "83509630a4b547519ecbe9d527f76a0210ee5591be06faec587d40cd88d1a8db"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        20
+      ]
+    },
+    "decode-code": {
+      "n": 3,
+      "values": [
+        145.4,
+        145.9,
+        146.0
+      ],
+      "median": 145.9,
+      "prefill_values": [
+        169.00155659328442,
+        112.54019292604501,
+        112.72141706924316
+      ],
+      "ttft_values": [
+        0.46767425537109375,
+        0.08011221885681152,
+        0.07970499992370605
+      ],
+      "output_tokens": [
+        45,
+        45,
+        45
+      ],
+      "hashes": [
+        "84b743e4e12cd440dacc177793f89cf81df7e295337e9b74c5f0fe1060867b2c",
+        "84b743e4e12cd440dacc177793f89cf81df7e295337e9b74c5f0fe1060867b2c",
+        "84b743e4e12cd440dacc177793f89cf81df7e295337e9b74c5f0fe1060867b2c"
+      ],
+      "reused": [
+        0,
+        69,
+        69
+      ],
+      "prompt_tokens": [
+        76,
+        76,
+        76
+      ]
+    },
+    "decode-zh": {
+      "n": 3,
+      "values": [
+        85.7,
+        82.2,
+        82.2
+      ],
+      "median": 82.2,
+      "prefill_values": [
+        146.72318226279754,
+        105.74018126888217,
+        105.74018126888217
+      ],
+      "ttft_values": [
+        0.324648380279541,
+        0.08524465560913086,
+        0.08523154258728027
+      ],
+      "output_tokens": [
+        244,
+        244,
+        244
+      ],
+      "hashes": [
+        "f3a547f22bd6decaa3614955d0fd86c66318d182f5aa55e7572062e8221af0a0",
+        "f3a547f22bd6decaa3614955d0fd86c66318d182f5aa55e7572062e8221af0a0",
+        "f3a547f22bd6decaa3614955d0fd86c66318d182f5aa55e7572062e8221af0a0"
+      ],
+      "reused": [
+        0,
+        38,
+        38
+      ],
+      "prompt_tokens": [
+        45,
+        45,
+        45
+      ]
+    },
+    "decode-en": {
+      "n": 3,
+      "values": [
+        80.1,
+        80.2,
+        80.2
+      ],
+      "median": 80.2,
+      "prefill_values": [
+        136.2559241706161,
+        105.90015128593042,
+        105.90015128593042
+      ],
+      "ttft_values": [
+        0.3569924831390381,
+        0.08533835411071777,
+        0.08493971824645996
+      ],
+      "output_tokens": [
+        248,
+        248,
+        248
+      ],
+      "hashes": [
+        "d40c323b023e4647ca662005d98debdeff72ab92dfb9cddc31ed24d4a8c5a40a",
+        "d40c323b023e4647ca662005d98debdeff72ab92dfb9cddc31ed24d4a8c5a40a",
+        "d40c323b023e4647ca662005d98debdeff72ab92dfb9cddc31ed24d4a8c5a40a"
+      ],
+      "reused": [
+        0,
+        39,
+        39
+      ],
+      "prompt_tokens": [
+        46,
+        46,
+        46
+      ]
+    },
+    "fresh-en-4096": {
+      "n": 2,
+      "values": [
+        1381.027253668763,
+        1365.4618473895582
+      ],
+      "median": 1373.2445505291607,
+      "prefill_values": [
+        1381.027253668763,
+        1365.4618473895582
+      ],
+      "ttft_values": [
+        3.077357292175293,
+        3.1123876571655273
+      ],
+      "output_tokens": [
+        24,
+        24
+      ],
+      "hashes": [
+        "17dc1e32c611639bc8c92c746d6bf15d100f1f7ca20d54e7bfb9158027302d51",
+        "17dc1e32c611639bc8c92c746d6bf15d100f1f7ca20d54e7bfb9158027302d51"
+      ],
+      "reused": [
+        0,
+        0
+      ],
+      "prompt_tokens": [
+        4216,
+        4216
+      ]
+    },
+    "fresh-en-16384": {
+      "n": 2,
+      "values": [
+        2444.6197820520456,
+        2429.932818372843
+      ],
+      "median": 2437.2763002124443,
+      "prefill_values": [
+        2444.6197820520456,
+        2429.932818372843
+      ],
+      "ttft_values": [
+        6.7581071853637695,
+        6.7987120151519775
+      ],
+      "output_tokens": [
+        24,
+        24
+      ],
+      "hashes": [
+        "17dc1e32c611639bc8c92c746d6bf15d100f1f7ca20d54e7bfb9158027302d51",
+        "17dc1e32c611639bc8c92c746d6bf15d100f1f7ca20d54e7bfb9158027302d51"
+      ],
+      "reused": [
+        0,
+        0
+      ],
+      "prompt_tokens": [
+        16421,
+        16421
+      ]
+    },
+    "fresh-en-32768": {
+      "n": 2,
+      "values": [
+        3133.849546960482,
+        3114.9579098216745
+      ],
+      "median": 3124.4037283910784,
+      "prefill_values": [
+        3133.849546960482,
+        3114.9579098216745
+      ],
+      "ttft_values": [
+        10.533998727798462,
+        10.59753155708313
+      ],
+      "output_tokens": [
+        24,
+        24
+      ],
+      "hashes": [
+        "17dc1e32c611639bc8c92c746d6bf15d100f1f7ca20d54e7bfb9158027302d51",
+        "17dc1e32c611639bc8c92c746d6bf15d100f1f7ca20d54e7bfb9158027302d51"
+      ],
+      "reused": [
+        0,
+        0
+      ],
+      "prompt_tokens": [
+        32823,
+        32822
+      ]
+    },
+    "fresh-en-130000": {
+      "n": 2,
+      "values": [
+        4028.014947905066,
+        4005.0814039685397
+      ],
+      "median": 4016.548175936803,
+      "prefill_values": [
+        4028.014947905066,
+        4005.0814039685397
+      ],
+      "ttft_values": [
+        32.483803510665894,
+        32.66765213012695
+      ],
+      "output_tokens": [
+        24,
+        24
+      ],
+      "hashes": [
+        "a92dbf1b526926bec643374ea67aea7b5e55ab3342958e9b0db8f91071439664",
+        "a92dbf1b526926bec643374ea67aea7b5e55ab3342958e9b0db8f91071439664"
+      ],
+      "reused": [
+        0,
+        0
+      ],
+      "prompt_tokens": [
+        130208,
+        130208
+      ]
+    },
+    "decode-code-32k": {
+      "n": 2,
+      "values": [
+        97.7,
+        96.1
+      ],
+      "median": 96.9,
+      "prefill_values": [
+        3085.0431447746882,
+        35.64154786150713
+      ],
+      "ttft_values": [
+        10.489450693130493,
+        0.23124051094055176
+      ],
+      "output_tokens": [
+        478,
+        478
+      ],
+      "hashes": [
+        "560d854a45a2fc8bc1b80e501be5981c9f1fedf52a7b5f85cbc136a3a3fb815a",
+        "560d854a45a2fc8bc1b80e501be5981c9f1fedf52a7b5f85cbc136a3a3fb815a"
+      ],
+      "reused": [
+        0,
+        32170
+      ],
+      "prompt_tokens": [
+        32177,
+        32177
+      ]
+    }
+  },
+  "context-256k-kv32-cache24": {
+    "warmup": {
+      "n": 1,
+      "values": [
+        74.8
+      ],
+      "median": 74.8,
+      "prefill_values": [
+        82.37232289950576
+      ],
+      "ttft_values": [
+        0.2609865665435791
+      ],
+      "output_tokens": [
+        46
+      ],
+      "hashes": [
+        "83509630a4b547519ecbe9d527f76a0210ee5591be06faec587d40cd88d1a8db"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        20
+      ]
+    },
+    "decode-code": {
+      "n": 3,
+      "values": [
+        147.1,
+        147.3,
+        147.6
+      ],
+      "median": 147.3,
+      "prefill_values": [
+        122.93756065998058,
+        113.45218800648297,
+        113.45218800648297
+      ],
+      "ttft_values": [
+        0.636864423751831,
+        0.0795283317565918,
+        0.0794525146484375
+      ],
+      "output_tokens": [
+        45,
+        45,
+        45
+      ],
+      "hashes": [
+        "84b743e4e12cd440dacc177793f89cf81df7e295337e9b74c5f0fe1060867b2c",
+        "84b743e4e12cd440dacc177793f89cf81df7e295337e9b74c5f0fe1060867b2c",
+        "84b743e4e12cd440dacc177793f89cf81df7e295337e9b74c5f0fe1060867b2c"
+      ],
+      "reused": [
+        0,
+        69,
+        69
+      ],
+      "prompt_tokens": [
+        76,
+        76,
+        76
+      ]
+    },
+    "decode-zh": {
+      "n": 3,
+      "values": [
+        90.3,
+        90.5,
+        90.5
+      ],
+      "median": 90.5,
+      "prefill_values": [
+        121.65450121654501,
+        113.26860841423948,
+        113.26860841423948
+      ],
+      "ttft_values": [
+        0.38835787773132324,
+        0.08051180839538574,
+        0.0790102481842041
+      ],
+      "output_tokens": [
+        244,
+        244,
+        244
+      ],
+      "hashes": [
+        "f3a547f22bd6decaa3614955d0fd86c66318d182f5aa55e7572062e8221af0a0",
+        "f3a547f22bd6decaa3614955d0fd86c66318d182f5aa55e7572062e8221af0a0",
+        "f3a547f22bd6decaa3614955d0fd86c66318d182f5aa55e7572062e8221af0a0"
+      ],
+      "reused": [
+        0,
+        38,
+        38
+      ],
+      "prompt_tokens": [
+        45,
+        45,
+        45
+      ]
+    },
+    "decode-en": {
+      "n": 3,
+      "values": [
+        88.1,
+        88.3,
+        84.4
+      ],
+      "median": 88.1,
+      "prefill_values": [
+        123.45679012345678,
+        113.26860841423948,
+        113.26860841423948
+      ],
+      "ttft_values": [
+        0.39069581031799316,
+        0.07947587966918945,
+        0.07948756217956543
+      ],
+      "output_tokens": [
+        248,
+        248,
+        248
+      ],
+      "hashes": [
+        "d40c323b023e4647ca662005d98debdeff72ab92dfb9cddc31ed24d4a8c5a40a",
+        "d40c323b023e4647ca662005d98debdeff72ab92dfb9cddc31ed24d4a8c5a40a",
+        "d40c323b023e4647ca662005d98debdeff72ab92dfb9cddc31ed24d4a8c5a40a"
+      ],
+      "reused": [
+        0,
+        39,
+        39
+      ],
+      "prompt_tokens": [
+        46,
+        46,
+        46
+      ]
+    },
+    "fresh-en-4096": {
+      "n": 2,
+      "values": [
+        1340.7963363439765,
+        1269.573596723681
+      ],
+      "median": 1305.1849665338286,
+      "prefill_values": [
+        1340.7963363439765,
+        1269.573596723681
+      ],
+      "ttft_values": [
+        3.177506923675537,
+        3.3449642658233643
+      ],
+      "output_tokens": [
+        24,
+        24
+      ],
+      "hashes": [
+        "17dc1e32c611639bc8c92c746d6bf15d100f1f7ca20d54e7bfb9158027302d51",
+        "2a2cb7b0897a965583cb9aae0324c71a79d3038ca74e229d6a35ea0b5fabeacc"
+      ],
+      "reused": [
+        0,
+        0
+      ],
+      "prompt_tokens": [
+        4216,
+        4216
+      ]
+    },
+    "fresh-en-16384": {
+      "n": 2,
+      "values": [
+        2311.547178310506,
+        2278.1947585288367
+      ],
+      "median": 2294.870968419671,
+      "prefill_values": [
+        2311.547178310506,
+        2278.1947585288367
+      ],
+      "ttft_values": [
+        7.152963876724243,
+        7.24846076965332
+      ],
+      "output_tokens": [
+        24,
+        24
+      ],
+      "hashes": [
+        "17dc1e32c611639bc8c92c746d6bf15d100f1f7ca20d54e7bfb9158027302d51",
+        "17dc1e32c611639bc8c92c746d6bf15d100f1f7ca20d54e7bfb9158027302d51"
+      ],
+      "reused": [
+        0,
+        0
+      ],
+      "prompt_tokens": [
+        16421,
+        16421
+      ]
+    },
+    "fresh-en-32768": {
+      "n": 2,
+      "values": [
+        2965.6300258407273,
+        2921.495327102804
+      ],
+      "median": 2943.5626764717654,
+      "prefill_values": [
+        2965.6300258407273,
+        2921.495327102804
+      ],
+      "ttft_values": [
+        11.129063844680786,
+        11.294920444488525
+      ],
+      "output_tokens": [
+        24,
+        24
+      ],
+      "hashes": [
+        "17dc1e32c611639bc8c92c746d6bf15d100f1f7ca20d54e7bfb9158027302d51",
+        "17dc1e32c611639bc8c92c746d6bf15d100f1f7ca20d54e7bfb9158027302d51"
+      ],
+      "reused": [
+        0,
+        0
+      ],
+      "prompt_tokens": [
+        32823,
+        32823
+      ]
+    },
+    "fresh-en-130000": {
+      "n": 2,
+      "values": [
+        3968.086597711938,
+        3837.3148491975076
+      ],
+      "median": 3902.7007234547227,
+      "prefill_values": [
+        3968.086597711938,
+        3837.3148491975076
+      ],
+      "ttft_values": [
+        32.97632598876953,
+        34.08788514137268
+      ],
+      "output_tokens": [
+        24,
+        24
+      ],
+      "hashes": [
+        "a92dbf1b526926bec643374ea67aea7b5e55ab3342958e9b0db8f91071439664",
+        "a92dbf1b526926bec643374ea67aea7b5e55ab3342958e9b0db8f91071439664"
+      ],
+      "reused": [
+        0,
+        0
+      ],
+      "prompt_tokens": [
+        130208,
+        130207
+      ]
+    },
+    "decode-code-32k": {
+      "n": 2,
+      "values": [
+        97.8,
+        97.4
+      ],
+      "median": 97.6,
+      "prefill_values": [
+        2673.1299637789516,
+        14.35897435897436
+      ],
+      "ttft_values": [
+        12.097947120666504,
+        0.5213263034820557
+      ],
+      "output_tokens": [
+        478,
+        478
+      ],
+      "hashes": [
+        "560d854a45a2fc8bc1b80e501be5981c9f1fedf52a7b5f85cbc136a3a3fb815a",
+        "560d854a45a2fc8bc1b80e501be5981c9f1fedf52a7b5f85cbc136a3a3fb815a"
+      ],
+      "reused": [
+        0,
+        32170
+      ],
+      "prompt_tokens": [
+        32177,
+        32177
+      ]
+    },
+    "fresh-en-240000": {
+      "n": 2,
+      "values": [
+        4155.916558216281,
+        3987.569431333777
+      ],
+      "median": 4071.7429947750293,
+      "prefill_values": [
+        4155.916558216281,
+        3987.569431333777
+      ],
+      "ttft_values": [
+        58.20916938781738,
+        60.652952671051025
+      ],
+      "output_tokens": [
+        24,
+        24
+      ],
+      "hashes": [
+        "ba476301670e5f050c585668d549a31758df0cf0839a116639dc22d5bdbe257f",
+        "86092d98741cc57dcf800f29993bae89166c7ac45058536e4ca7669678365011"
+      ],
+      "reused": [
+        0,
+        0
+      ],
+      "prompt_tokens": [
+        240783,
+        240783
+      ]
+    },
+    "decode-code-240000": {
+      "n": 2,
+      "values": [
+        91.6,
+        89.5
+      ],
+      "median": 90.55,
+      "prefill_values": [
+        3995.0104667403157,
+        2.7488709994109564
+      ],
+      "ttft_values": [
+        60.55574989318848,
+        2.677231550216675
+      ],
+      "output_tokens": [
+        557,
+        557
+      ],
+      "hashes": [
+        "dea81e444dbcdeec690c22fa05ff46c022496ec27dcba56c27fb94008fb88f37",
+        "dea81e444dbcdeec690c22fa05ff46c022496ec27dcba56c27fb94008fb88f37"
+      ],
+      "reused": [
+        0,
+        240837
+      ],
+      "prompt_tokens": [
+        240844,
+        240844
+      ]
+    }
+  },
+  "kv-65536": {
+    "warmup": {
+      "n": 1,
+      "values": [
+        74.7
+      ],
+      "median": 74.7,
+      "prefill_values": [
+        81.69934640522875
+      ],
+      "ttft_values": [
+        0.2637004852294922
+      ],
+      "output_tokens": [
+        46
+      ],
+      "hashes": [
+        "83509630a4b547519ecbe9d527f76a0210ee5591be06faec587d40cd88d1a8db"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        20
+      ]
+    },
+    "decode-code": {
+      "n": 1,
+      "values": [
+        147.1
+      ],
+      "median": 147.1,
+      "prefill_values": [
+        122.62020006453696
+      ],
+      "ttft_values": [
+        0.6385512351989746
+      ],
+      "output_tokens": [
+        45
+      ],
+      "hashes": [
+        "84b743e4e12cd440dacc177793f89cf81df7e295337e9b74c5f0fe1060867b2c"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        76
+      ]
+    },
+    "decode-zh": {
+      "n": 1,
+      "values": [
+        90.3
+      ],
+      "median": 90.3,
+      "prefill_values": [
+        121.52308938698353
+      ],
+      "ttft_values": [
+        0.3890388011932373
+      ],
+      "output_tokens": [
+        244
+      ],
+      "hashes": [
+        "f3a547f22bd6decaa3614955d0fd86c66318d182f5aa55e7572062e8221af0a0"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        45
+      ]
+    },
+    "decode-en": {
+      "n": 1,
+      "values": [
+        88.2
+      ],
+      "median": 88.2,
+      "prefill_values": [
+        123.32439678284182
+      ],
+      "ttft_values": [
+        0.39130377769470215
+      ],
+      "output_tokens": [
+        248
+      ],
+      "hashes": [
+        "d40c323b023e4647ca662005d98debdeff72ab92dfb9cddc31ed24d4a8c5a40a"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        46
+      ]
+    },
+    "fresh-en-32768": {
+      "n": 1,
+      "values": [
+        3055.9176225234623
+      ],
+      "median": 3055.9176225234623,
+      "prefill_values": [
+        3055.9176225234623
+      ],
+      "ttft_values": [
+        10.81802487373352
+      ],
+      "output_tokens": [
+        24
+      ],
+      "hashes": [
+        "17dc1e32c611639bc8c92c746d6bf15d100f1f7ca20d54e7bfb9158027302d51"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        32823
+      ]
+    },
+    "fresh-en-130000": {
+      "n": 1,
+      "values": [
+        3961.362357200444
+      ],
+      "median": 3961.362357200444,
+      "prefill_values": [
+        3961.362357200444
+      ],
+      "ttft_values": [
+        33.031426429748535
+      ],
+      "output_tokens": [
+        24
+      ],
+      "hashes": [
+        "f2203ab19f9f8ce162cfbfce737df846af1ff6eb90f9a45197a1b98ef7a4eb09"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        130208
+      ]
+    },
+    "decode-code-240000": {
+      "n": 2,
+      "values": [
+        91.9,
+        89.9
+      ],
+      "median": 90.9,
+      "prefill_values": [
+        4044.569461354381,
+        2.5421266705403838
+      ],
+      "ttft_values": [
+        59.82128858566284,
+        2.87878680229187
+      ],
+      "output_tokens": [
+        557,
+        557
+      ],
+      "hashes": [
+        "dea81e444dbcdeec690c22fa05ff46c022496ec27dcba56c27fb94008fb88f37",
+        "dea81e444dbcdeec690c22fa05ff46c022496ec27dcba56c27fb94008fb88f37"
+      ],
+      "reused": [
+        0,
+        240837
+      ],
+      "prompt_tokens": [
+        240844,
+        240844
+      ]
+    }
+  },
+  "kv-131072": {
+    "warmup": {
+      "n": 1,
+      "values": [
+        74.7
+      ],
+      "median": 74.7,
+      "prefill_values": [
+        81.49959250203749
+      ],
+      "ttft_values": [
+        0.2640562057495117
+      ],
+      "output_tokens": [
+        46
+      ],
+      "hashes": [
+        "83509630a4b547519ecbe9d527f76a0210ee5591be06faec587d40cd88d1a8db"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        20
+      ]
+    },
+    "decode-code": {
+      "n": 1,
+      "values": [
+        147.1
+      ],
+      "median": 147.1,
+      "prefill_values": [
+        122.77867528271406
+      ],
+      "ttft_values": [
+        0.6378657817840576
+      ],
+      "output_tokens": [
+        45
+      ],
+      "hashes": [
+        "84b743e4e12cd440dacc177793f89cf81df7e295337e9b74c5f0fe1060867b2c"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        76
+      ]
+    },
+    "decode-zh": {
+      "n": 1,
+      "values": [
+        90.3
+      ],
+      "median": 90.3,
+      "prefill_values": [
+        121.09795479009686
+      ],
+      "ttft_values": [
+        0.3896214962005615
+      ],
+      "output_tokens": [
+        244
+      ],
+      "hashes": [
+        "f3a547f22bd6decaa3614955d0fd86c66318d182f5aa55e7572062e8221af0a0"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        45
+      ]
+    },
+    "decode-en": {
+      "n": 1,
+      "values": [
+        88.1
+      ],
+      "median": 88.1,
+      "prefill_values": [
+        122.79765082754938
+      ],
+      "ttft_values": [
+        0.39234280586242676
+      ],
+      "output_tokens": [
+        248
+      ],
+      "hashes": [
+        "d40c323b023e4647ca662005d98debdeff72ab92dfb9cddc31ed24d4a8c5a40a"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        46
+      ]
+    },
+    "fresh-en-32768": {
+      "n": 1,
+      "values": [
+        3056.031432721314
+      ],
+      "median": 3056.031432721314,
+      "prefill_values": [
+        3056.031432721314
+      ],
+      "ttft_values": [
+        10.814213991165161
+      ],
+      "output_tokens": [
+        24
+      ],
+      "hashes": [
+        "17dc1e32c611639bc8c92c746d6bf15d100f1f7ca20d54e7bfb9158027302d51"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        32823
+      ]
+    },
+    "fresh-en-130000": {
+      "n": 1,
+      "values": [
+        3961.8565421385406
+      ],
+      "median": 3961.8565421385406,
+      "prefill_values": [
+        3961.8565421385406
+      ],
+      "ttft_values": [
+        33.026793241500854
+      ],
+      "output_tokens": [
+        24
+      ],
+      "hashes": [
+        "a92dbf1b526926bec643374ea67aea7b5e55ab3342958e9b0db8f91071439664"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        130208
+      ]
+    },
+    "decode-code-240000": {
+      "n": 2,
+      "values": [
+        91.5,
+        90.1
+      ],
+      "median": 90.8,
+      "prefill_values": [
+        4045.5817484873833,
+        2.5386233408283165
+      ],
+      "ttft_values": [
+        59.80793333053589,
+        2.886249303817749
+      ],
+      "output_tokens": [
+        557,
+        557
+      ],
+      "hashes": [
+        "dea81e444dbcdeec690c22fa05ff46c022496ec27dcba56c27fb94008fb88f37",
+        "dea81e444dbcdeec690c22fa05ff46c022496ec27dcba56c27fb94008fb88f37"
+      ],
+      "reused": [
+        0,
+        240837
+      ],
+      "prompt_tokens": [
+        240844,
+        240844
+      ]
+    }
+  },
+  "kv-262144-reserve512-1024": {
+    "warmup": {
+      "n": 1,
+      "values": [
+        73.3
+      ],
+      "median": 73.3,
+      "prefill_values": [
+        80.8080808080808
+      ],
+      "ttft_values": [
+        0.2658252716064453
+      ],
+      "output_tokens": [
+        46
+      ],
+      "hashes": [
+        "83509630a4b547519ecbe9d527f76a0210ee5591be06faec587d40cd88d1a8db"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        20
+      ]
+    },
+    "decode-code": {
+      "n": 1,
+      "values": [
+        148.1
+      ],
+      "median": 148.1,
+      "prefill_values": [
+        142.91086874764952
+      ],
+      "ttft_values": [
+        0.5504348278045654
+      ],
+      "output_tokens": [
+        45
+      ],
+      "hashes": [
+        "84b743e4e12cd440dacc177793f89cf81df7e295337e9b74c5f0fe1060867b2c"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        76
+      ]
+    },
+    "decode-zh": {
+      "n": 1,
+      "values": [
+        91.2
+      ],
+      "median": 91.2,
+      "prefill_values": [
+        121.75324675324674
+      ],
+      "ttft_values": [
+        0.388169527053833
+      ],
+      "output_tokens": [
+        244
+      ],
+      "hashes": [
+        "f3a547f22bd6decaa3614955d0fd86c66318d182f5aa55e7572062e8221af0a0"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        45
+      ]
+    },
+    "decode-en": {
+      "n": 1,
+      "values": [
+        89.0
+      ],
+      "median": 89.0,
+      "prefill_values": [
+        123.58946802794198
+      ],
+      "ttft_values": [
+        0.3906409740447998
+      ],
+      "output_tokens": [
+        248
+      ],
+      "hashes": [
+        "d40c323b023e4647ca662005d98debdeff72ab92dfb9cddc31ed24d4a8c5a40a"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        46
+      ]
+    },
+    "fresh-en-32768": {
+      "n": 1,
+      "values": [
+        3301.5148162304617
+      ],
+      "median": 3301.5148162304617,
+      "prefill_values": [
+        3301.5148162304617
+      ],
+      "ttft_values": [
+        10.006234645843506
+      ],
+      "output_tokens": [
+        24
+      ],
+      "hashes": [
+        "17dc1e32c611639bc8c92c746d6bf15d100f1f7ca20d54e7bfb9158027302d51"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        32823
+      ]
+    },
+    "fresh-en-130000": {
+      "n": 1,
+      "values": [
+        4178.033621157135
+      ],
+      "median": 4178.033621157135,
+      "prefill_values": [
+        4178.033621157135
+      ],
+      "ttft_values": [
+        31.327794313430786
+      ],
+      "output_tokens": [
+        24
+      ],
+      "hashes": [
+        "a92dbf1b526926bec643374ea67aea7b5e55ab3342958e9b0db8f91071439664"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        130208
+      ]
+    },
+    "decode-code-240000": {
+      "n": 2,
+      "values": [
+        94.7,
+        90.9
+      ],
+      "median": 92.80000000000001,
+      "prefill_values": [
+        4316.6416641126425,
+        2.270736691861031
+      ],
+      "ttft_values": [
+        56.070157051086426,
+        3.2122135162353516
+      ],
+      "output_tokens": [
+        557,
+        557
+      ],
+      "hashes": [
+        "dea81e444dbcdeec690c22fa05ff46c022496ec27dcba56c27fb94008fb88f37",
+        "dea81e444dbcdeec690c22fa05ff46c022496ec27dcba56c27fb94008fb88f37"
+      ],
+      "reused": [
+        0,
+        240837
+      ],
+      "prompt_tokens": [
+        240844,
+        240844
+      ]
+    }
+  },
+  "kv-32768-reserve512-1024": {
+    "warmup": {
+      "n": 1,
+      "values": [
+        72.6
+      ],
+      "median": 72.6,
+      "prefill_values": [
+        80.97165991902834
+      ],
+      "ttft_values": [
+        0.2654693126678467
+      ],
+      "output_tokens": [
+        46
+      ],
+      "hashes": [
+        "83509630a4b547519ecbe9d527f76a0210ee5591be06faec587d40cd88d1a8db"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        20
+      ]
+    },
+    "decode-code": {
+      "n": 1,
+      "values": [
+        146.9
+      ],
+      "median": 146.9,
+      "prefill_values": [
+        121.77535651337926
+      ],
+      "ttft_values": [
+        0.6428625583648682
+      ],
+      "output_tokens": [
+        45
+      ],
+      "hashes": [
+        "84b743e4e12cd440dacc177793f89cf81df7e295337e9b74c5f0fe1060867b2c"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        76
+      ]
+    },
+    "decode-zh": {
+      "n": 1,
+      "values": [
+        90.1
+      ],
+      "median": 90.1,
+      "prefill_values": [
+        121.13055181695827
+      ],
+      "ttft_values": [
+        0.3902409076690674
+      ],
+      "output_tokens": [
+        244
+      ],
+      "hashes": [
+        "f3a547f22bd6decaa3614955d0fd86c66318d182f5aa55e7572062e8221af0a0"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        45
+      ]
+    },
+    "decode-en": {
+      "n": 1,
+      "values": [
+        88.0
+      ],
+      "median": 88.0,
+      "prefill_values": [
+        123.06046013911183
+      ],
+      "ttft_values": [
+        0.39182162284851074
+      ],
+      "output_tokens": [
+        248
+      ],
+      "hashes": [
+        "d40c323b023e4647ca662005d98debdeff72ab92dfb9cddc31ed24d4a8c5a40a"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        46
+      ]
+    },
+    "fresh-en-32768": {
+      "n": 1,
+      "values": [
+        3052.5072539245593
+      ],
+      "median": 3052.5072539245593,
+      "prefill_values": [
+        3052.5072539245593
+      ],
+      "ttft_values": [
+        10.828041791915894
+      ],
+      "output_tokens": [
+        24
+      ],
+      "hashes": [
+        "17dc1e32c611639bc8c92c746d6bf15d100f1f7ca20d54e7bfb9158027302d51"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        32823
+      ]
+    },
+    "fresh-en-130000": {
+      "n": 1,
+      "values": [
+        3955.9344485425922
+      ],
+      "median": 3955.9344485425922,
+      "prefill_values": [
+        3955.9344485425922
+      ],
+      "ttft_values": [
+        33.07831645011902
+      ],
+      "output_tokens": [
+        24
+      ],
+      "hashes": [
+        "a92dbf1b526926bec643374ea67aea7b5e55ab3342958e9b0db8f91071439664"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        130208
+      ]
+    },
+    "decode-code-240000": {
+      "n": 2,
+      "values": [
+        92.6,
+        89.5
+      ],
+      "median": 91.05,
+      "prefill_values": [
+        4047.567029783172,
+        2.5374270489723423
+      ],
+      "ttft_values": [
+        59.77694749832153,
+        2.8869845867156982
+      ],
+      "output_tokens": [
+        557,
+        557
+      ],
+      "hashes": [
+        "dea81e444dbcdeec690c22fa05ff46c022496ec27dcba56c27fb94008fb88f37",
+        "dea81e444dbcdeec690c22fa05ff46c022496ec27dcba56c27fb94008fb88f37"
+      ],
+      "reused": [
+        0,
+        240837
+      ],
+      "prompt_tokens": [
+        240844,
+        240844
+      ]
+    }
+  },
+  "final-256k-selected": {
+    "warmup": {
+      "n": 1,
+      "values": [
+        75.3
+      ],
+      "median": 75.3,
+      "prefill_values": [
+        81.59934720522236
+      ],
+      "ttft_values": [
+        0.26366209983825684
+      ],
+      "output_tokens": [
+        46
+      ],
+      "hashes": [
+        "83509630a4b547519ecbe9d527f76a0210ee5591be06faec587d40cd88d1a8db"
+      ],
+      "reused": [
+        0
+      ],
+      "prompt_tokens": [
+        20
+      ]
+    },
+    "decode-code": {
+      "n": 3,
+      "values": [
+        148.4,
+        148.4,
+        148.4
+      ],
+      "median": 148.4,
+      "prefill_values": [
+        144.45922828359627,
+        113.82113821138212,
+        114.00651465798046
+      ],
+      "ttft_values": [
+        0.544165849685669,
+        0.07903504371643066,
+        0.0789022445678711
+      ],
+      "output_tokens": [
+        45,
+        45,
+        45
+      ],
+      "hashes": [
+        "84b743e4e12cd440dacc177793f89cf81df7e295337e9b74c5f0fe1060867b2c",
+        "84b743e4e12cd440dacc177793f89cf81df7e295337e9b74c5f0fe1060867b2c",
+        "84b743e4e12cd440dacc177793f89cf81df7e295337e9b74c5f0fe1060867b2c"
+      ],
+      "reused": [
+        0,
+        69,
+        69
+      ],
+      "prompt_tokens": [
+        76,
+        76,
+        76
+      ]
+    },
+    "decode-zh": {
+      "n": 3,
+      "values": [
+        91.0,
+        91.0,
+        89.8
+      ],
+      "median": 91.0,
+      "prefill_values": [
+        121.42471667566109,
+        113.82113821138212,
+        113.82113821138212
+      ],
+      "ttft_values": [
+        0.38902950286865234,
+        0.07918286323547363,
+        0.07930135726928711
+      ],
+      "output_tokens": [
+        244,
+        244,
+        244
+      ],
+      "hashes": [
+        "f3a547f22bd6decaa3614955d0fd86c66318d182f5aa55e7572062e8221af0a0",
+        "f3a547f22bd6decaa3614955d0fd86c66318d182f5aa55e7572062e8221af0a0",
+        "f3a547f22bd6decaa3614955d0fd86c66318d182f5aa55e7572062e8221af0a0"
+      ],
+      "reused": [
+        0,
+        38,
+        38
+      ],
+      "prompt_tokens": [
+        45,
+        45,
+        45
+      ]
+    },
+    "decode-en": {
+      "n": 3,
+      "values": [
+        85.2,
+        83.4,
+        83.2
+      ],
+      "median": 83.4,
+      "prefill_values": [
+        120.32435260266806,
+        109.89010989010988,
+        108.19165378670787
+      ],
+      "ttft_values": [
+        0.40101194381713867,
+        0.08185219764709473,
+        0.08338117599487305
+      ],
+      "output_tokens": [
+        248,
+        248,
+        248
+      ],
+      "hashes": [
+        "d40c323b023e4647ca662005d98debdeff72ab92dfb9cddc31ed24d4a8c5a40a",
+        "d40c323b023e4647ca662005d98debdeff72ab92dfb9cddc31ed24d4a8c5a40a",
+        "d40c323b023e4647ca662005d98debdeff72ab92dfb9cddc31ed24d4a8c5a40a"
+      ],
+      "reused": [
+        0,
+        39,
+        39
+      ],
+      "prompt_tokens": [
+        46,
+        46,
+        46
+      ]
+    },
+    "fresh-en-4096": {
+      "n": 2,
+      "values": [
+        1405.005498716966,
+        1340.924270856525
+      ],
+      "median": 1372.9648847867456,
+      "prefill_values": [
+        1405.005498716966,
+        1340.924270856525
+      ],
+      "ttft_values": [
+        3.033313035964966,
+        3.168339252471924
+      ],
+      "output_tokens": [
+        24,
+        24
+      ],
+      "hashes": [
+        "17dc1e32c611639bc8c92c746d6bf15d100f1f7ca20d54e7bfb9158027302d51",
+        "17dc1e32c611639bc8c92c746d6bf15d100f1f7ca20d54e7bfb9158027302d51"
+      ],
+      "reused": [
+        0,
+        0
+      ],
+      "prompt_tokens": [
+        4216,
+        4216
+      ]
+    },
+    "fresh-en-16384": {
+      "n": 2,
+      "values": [
+        2512.662004804676,
+        2475.8013448722972
+      ],
+      "median": 2494.2316748384865,
+      "prefill_values": [
+        2512.662004804676,
+        2475.8013448722972
+      ],
+      "ttft_values": [
+        6.583894968032837,
+        6.673477649688721
+      ],
+      "output_tokens": [
+        24,
+        24
+      ],
+      "hashes": [
+        "17dc1e32c611639bc8c92c746d6bf15d100f1f7ca20d54e7bfb9158027302d51",
+        "17dc1e32c611639bc8c92c746d6bf15d100f1f7ca20d54e7bfb9158027302d51"
+      ],
+      "reused": [
+        0,
+        0
+      ],
+      "prompt_tokens": [
+        16421,
+        16421
+      ]
+    },
+    "fresh-en-32768": {
+      "n": 2,
+      "values": [
+        3188.029954252746,
+        3137.558550807762
+      ],
+      "median": 3162.794252530254,
+      "prefill_values": [
+        3188.029954252746,
+        3137.558550807762
+      ],
+      "ttft_values": [
+        10.357245683670044,
+        10.520052433013916
+      ],
+      "output_tokens": [
+        24,
+        24
+      ],
+      "hashes": [
+        "17dc1e32c611639bc8c92c746d6bf15d100f1f7ca20d54e7bfb9158027302d51",
+        "17dc1e32c611639bc8c92c746d6bf15d100f1f7ca20d54e7bfb9158027302d51"
+      ],
+      "reused": [
+        0,
+        0
+      ],
+      "prompt_tokens": [
+        32823,
+        32822
+      ]
+    },
+    "fresh-en-130000": {
+      "n": 2,
+      "values": [
+        4180.018683728143,
+        4021.1855900928026
+      ],
+      "median": 4100.602136910473,
+      "prefill_values": [
+        4180.018683728143,
+        4021.1855900928026
+      ],
+      "ttft_values": [
+        31.312809705734253,
+        32.539485692977905
+      ],
+      "output_tokens": [
+        24,
+        24
+      ],
+      "hashes": [
+        "a92dbf1b526926bec643374ea67aea7b5e55ab3342958e9b0db8f91071439664",
+        "a92dbf1b526926bec643374ea67aea7b5e55ab3342958e9b0db8f91071439664"
+      ],
+      "reused": [
+        0,
+        0
+      ],
+      "prompt_tokens": [
+        130208,
+        130208
+      ]
+    },
+    "decode-code-32k": {
+      "n": 2,
+      "values": [
+        98.6,
+        93.6
+      ],
+      "median": 96.1,
+      "prefill_values": [
+        2819.2547291318024,
+        11.48105625717566
+      ],
+      "ttft_values": [
+        11.464508056640625,
+        0.6451151371002197
+      ],
+      "output_tokens": [
+        478,
+        478
+      ],
+      "hashes": [
+        "560d854a45a2fc8bc1b80e501be5981c9f1fedf52a7b5f85cbc136a3a3fb815a",
+        "560d854a45a2fc8bc1b80e501be5981c9f1fedf52a7b5f85cbc136a3a3fb815a"
+      ],
+      "reused": [
+        0,
+        32170
+      ],
+      "prompt_tokens": [
+        32177,
+        32177
+      ]
+    },
+    "fresh-en-240000": {
+      "n": 2,
+      "values": [
+        4447.833098426338,
+        4226.354090971323
+      ],
+      "median": 4337.09359469883,
+      "prefill_values": [
+        4447.833098426338,
+        4226.354090971323
+      ],
+      "ttft_values": [
+        54.41267204284668,
+        57.25063705444336
+      ],
+      "output_tokens": [
+        24,
+        24
+      ],
+      "hashes": [
+        "17dc1e32c611639bc8c92c746d6bf15d100f1f7ca20d54e7bfb9158027302d51",
+        "f65810bc638ca0cb2a5f40de6c1c58963ebf751d89762888bbe1139d075e4dff"
+      ],
+      "reused": [
+        0,
+        0
+      ],
+      "prompt_tokens": [
+        240783,
+        240783
+      ]
+    }
+  }
+}

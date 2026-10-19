@@ -1,0 +1,134 @@
+{
+  "context_tokens": 262144,
+  "resident_experts": 24576,
+  "verifier_graphs": 8,
+  "cache_capacity": {
+    "sessions_loaded": 11,
+    "before_restores": {
+      "enabled": true,
+      "budget_mib": 65536,
+      "slots": 16,
+      "parked": 10,
+      "bytes": 28321986000,
+      "evictions": 0,
+      "parks": 10,
+      "restores": 0,
+      "last_event": "parked",
+      "last_tokens": 130228,
+      "last_at": 1792368476.1159122,
+      "requests": 11,
+      "requests_reused": 0,
+      "reused_tokens": 0,
+      "prompt_tokens": 1432443,
+      "last_reused": 0,
+      "last_prompt": 130223
+    },
+    "restored": [
+      {
+        "reused": 130215,
+        "ttft_s": 2.5876805782318115
+      },
+      {
+        "reused": 130215,
+        "ttft_s": 1.159919261932373
+      },
+      {
+        "reused": 130216,
+        "ttft_s": 1.0371978282928467
+      }
+    ],
+    "all_restored_answers_correct": true
+  },
+  "long_retrieval": {
+    "prompt_tokens": 240915,
+    "four_facts_correct": true
+  },
+  "behavior_groups": {
+    "arithmetic": {
+      "ok": true
+    },
+    "vision": {
+      "ok": true
+    },
+    "thinking": {
+      "ok": true
+    },
+    "tool_call": {
+      "ok": true
+    },
+    "cancel_recovery": {
+      "ok": true
+    },
+    "conversation_restore": {
+      "ok": true
+    },
+    "four_clients_queued": {
+      "ok": true
+    },
+    "256k_fit_output_budget": {
+      "ok": true
+    },
+    "256k_boundary_generation": {
+      "ok": true
+    }
+  },
+  "boundary": {
+    "ok": true,
+    "synthetic_forced_token_test": true,
+    "forced_token_id": 15,
+    "logit_bias": 100,
+    "counted_input_tokens": 261936,
+    "usage": {
+      "input_tokens": 261936,
+      "output_tokens": 200,
+      "cache_read_input_tokens": 0
+    },
+    "stop_reason": "max_tokens",
+    "ordinary_sampling_recovery": "579"
+  },
+  "soak": {
+    "streams": 4,
+    "duration_s": 600,
+    "requests": 140,
+    "errors": 0,
+    "empty": 0,
+    "wrong_answers": 0,
+    "ttft_p50": 14.78,
+    "ttft_p95": 28.8,
+    "ttft_max": 29.35,
+    "per_stream": [
+      {
+        "reqs": 29,
+        "err": 0,
+        "empty": 0,
+        "wrong": 0,
+        "ttft_med": 18.51
+      },
+      {
+        "reqs": 52,
+        "err": 0,
+        "empty": 0,
+        "wrong": 0,
+        "ttft_med": 10.21
+      },
+      {
+        "reqs": 29,
+        "err": 0,
+        "empty": 0,
+        "wrong": 0,
+        "ttft_med": 18.41
+      },
+      {
+        "reqs": 30,
+        "err": 0,
+        "empty": 0,
+        "wrong": 0,
+        "ttft_med": 20.35
+      }
+    ]
+  },
+  "maximum_sampled_temperature_c": 63,
+  "maximum_sampled_power_w": 310.6,
+  "volatile_uncorrected_ecc_max": 0,
+  "scope": "Recorded on the reference machine, not a portability claim; four clients queue behind one sequence."
+}

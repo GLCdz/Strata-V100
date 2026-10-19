@@ -1,4 +1,7 @@
 #include "strata/core/logit_bias.hpp"
+#if defined(STRATA_EXPERIMENTAL_SM60) && !defined(STRATA_USE_HIP) && !defined(STRATA_HIP_GFX906)
+#include "../prefill/cuda_length_chunks.hpp"
+#endif
 // src/program/generate.cpp - P2.S6: `strata generate`.
 //
 // THE DRIVER, and the first program in this project that answers a question.  Everything below it is a
@@ -7181,7 +7184,21 @@ int main(int argc, char** argv) {
     // segment's chunk is chosen (the serve lend, generate's prompt); `request_chunk` is unchanged because
     // STRATA_SPLIT_SMALL_OWN uses it too.  The chunk geometry changes the rounding, so it is off by default.
     static const bool equal_chunks = [] { const char* e = std::getenv("STRATA_PREFILL_EQUAL"); return e != nullptr && e[0] == '1'; }();
+    bool length_chunks = false;
+#if defined(STRATA_EXPERIMENTAL_SM60) && !defined(STRATA_USE_HIP) && !defined(STRATA_HIP_GFX906)
+    // Local CUDA experiment only. Other backends and the default path are unchanged.
+    if (const char* e = std::getenv("STRATA_PREFILL_LENGTH_CHUNKS"))
+        length_chunks = multi_gpu && !o.prefill_head_alias && std::atoi(e) != 0;
+    if (length_chunks)
+        std::fprintf(stderr, "strata generate: measured length chunks on: <=8192:2048, <=49152:4096, longer:8192; configured cap %lld\n",
+                     (long long) o.prefill_chunk);
+#endif
     auto equal_chunk = [&](int64_t tokens, int64_t max_chunk) -> int64_t {
+#if defined(STRATA_EXPERIMENTAL_SM60) && !defined(STRATA_USE_HIP) && !defined(STRATA_HIP_GFX906)
+        // Explicit request/operator pipe tuning takes precedence over the measured table.
+        if (length_chunks && strata::prefill::Prefill::pipe_setting() <= 0.0)
+            max_chunk = strata::prefill::cuda_length_chunks::cap(tokens, max_chunk);
+#endif
         const int64_t plain = request_chunk(tokens, max_chunk);
         if (!equal_chunks || tokens <= 0 || max_chunk <= 0) return plain;
         const int64_t n = tokens / max_chunk + (tokens % max_chunk != 0);
@@ -12776,7 +12793,11 @@ int main(int argc, char** argv) {
                         resume_plan = {};   // the first segment only
                     }
                     if (plan.chunk <= 0) {
-                        const int64_t c = sp.plan_chunk(b0 - a0);
+                        int64_t c = sp.plan_chunk(b0 - a0);
+                        // Retain the chosen geometry across checkpoints/BYIELD, including when pipe=0.
+                        // lend(..., resume_plan.lend) above restores its original allocation before this check.
+                        if (c <= 0 && length_chunks && strata::prefill::Prefill::pipe_setting() <= 0.0)
+                            c = sp.chunk();
                         if (c > 0) {
                             plan.chunk = c;
                             plan.from = a0;

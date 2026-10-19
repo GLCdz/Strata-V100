@@ -1,0 +1,48 @@
+{
+  "description": "Measured 4x V100-SXM2-16GB single-sequence profile; apply to your own setup-generated model configuration.",
+  "arguments": {
+    "--expert-cache": "auto",
+    "--kv": "int8",
+    "--pcie-frac": "0.00",
+    "--spec-min-p": "0.70",
+    "--pipeline-windows": "2",
+    "--spec": "4",
+    "--ple-io": "ram",
+    "--conversation-cache-min-tokens": "4096",
+    "--suffix-draft": "0",
+    "--prefill": "8192",
+    "--max-context": "262144",
+    "--kv-resident": "262144",
+    "--conversation-cache-mib": "65536",
+    "--conversation-cache-slots": "16",
+    "--layer-split": "14,26,38",
+    "--vram-reserve-mib": "512",
+    "--vram-reserve-later-mib": "1024"
+  },
+  "switches": [
+    "--trim-stage-weights"
+  ],
+  "environment": {
+    "STRATA_SM70_TABLE": "1",
+    "STRATA_QSA_ROWS": "1",
+    "STRATA_EXPDEC": "1",
+    "STRATA_KV_PREFETCH": "1",
+    "STRATA_SCORES_THREAD": "1",
+    "STRATA_DEQUANT_WIDE": "1",
+    "STRATA_HANDOFF_PIPE": "4",
+    "STRATA_QIL": "1",
+    "STRATA_SPLIT_MTP_BATCH": "1",
+    "STRATA_MMQ_DIRECT": "1",
+    "STRATA_PREFILL_LENGTH_CHUNKS": "1"
+  },
+  "removed_arguments": [
+    "--batch",
+    "--batch-groups",
+    "--batch-mtp"
+  ],
+  "context_tokens": 262144,
+  "gpu_count": 4,
+  "power_limit_w_per_gpu": 300,
+  "hugepages_2mib": 24576,
+  "aux_cpus_measured": "25-47"
+}
